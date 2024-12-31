@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <meta name="mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-title" content="souharda">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>souharda</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Firebase Modular SDKs -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDSt6NhRsFEzPhbgBuJbWMA46xnuM13aMs",
+      authDomain: "souharda-d8685.firebaseapp.com",
+      projectId: "souharda-d8685",
+      storageBucket: "souharda-d8685.firebasestorage.app",
+      messagingSenderId: "231494125746",
+      appId: "1:231494125746:web:2d0eaf715557ad63a861ab",
+      measurementId: "G-LBTSYM1M05"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const firestore = getFirestore(app);
+  </script>
+
+  <!-- Flutter Web Initialization -->
+  <base href="/">
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+<script>
+ const serviceWorkerVersion = '1.0.0';
+    window.addEventListener('load', function(ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
